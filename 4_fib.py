@@ -36,46 +36,24 @@
 # 19
 
 
-# def FIB(n, k):
-#     rabits = 0
-#     youngs = 2
-#     litter = 0
-#
-#     for i in range(0, n + 1):
-#
-#         pairs = rabits // 2
-#
-#         rabits = rabits + youngs
-#
-#         youngs = litter
-#         litter = pairs * k
-#
-#         print("Rabits: {}".format(rabits))
-#         print("Youngs: {}".format(youngs))
-#         print("Litter: {}".format(litter))
-#         print("Total: {}".format(rabits + youngs + litter))
-#         print("*" * 50)
-
-
 def FIB(n, k):
-    #if n == 1:
-    #    return 1
+    rabits = 0
+    youngs = 0
+    litter = 1
 
-    #elif n == 2:
-    #    return k;
+    for i in range(0, n-1):
+        rabits = rabits + youngs
+        youngs = litter
+        litter = rabits * k
 
-    for i in range(n, 0):
-        oneGen = FIB(n, k)
-        twoGen = FIB(n - 1, k)
-
-    #if n <= 4:
-    #    return oneGen + twoGen
-
-        return oneGen + (twoGen * k)
+        print("Rabits: {}".format(rabits))
+        print("Youngs: {}".format(youngs))
+        print("Litter: {}".format(litter))
+        print("Total: {}".format(rabits + youngs + litter))
+        print("*" * 50)
 
 
 if __name__ == "__main__":
-    n = 5
-    k = 3
-    fib = FIB(n, k)
-    print(fib)
+    n = 36
+    k = 2
+    FIB(n, k)

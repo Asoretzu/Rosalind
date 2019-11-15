@@ -38,8 +38,47 @@
 # 60.919540
 
 
+file_name = "TXT/gc.txt"
+
+
 def GC():
-    pass
+    fasta_ids = []
+    fasta_codes = []
+    pair_count = []
+    gc_content = []
+
+    with open(file_name, mode="r") as f:
+        for line in f:
+            if line[0] == ">":
+                line = line[1:-1]
+                fasta_ids.append(line)
+
+    with open(file_name, mode="r") as f:
+        for line in f:
+            string = ""
+            print(line[0])
+            # while line[0] != ">" and line:
+            #     string = string + line[0:-1]
+            # fasta_codes.append(string)
+
+        # print(len(fasta_codes))
+        # print(fasta_codes)
+        #
+        # for codes in fasta_codes:
+        #     count = 0
+        #     for i in range(0, len(codes)):
+        #             code = codes[i]
+        #             if code == "G" or code == "C":
+        #                 count = count + 1
+        #     pair_count.append(count)
+        #
+        # for i in range(0, len(fasta_ids)):
+        #     porcent = ((100 / len(fasta_codes[i])) * pair_count[i])
+        #     gc_content.append(porcent)
+        #
+        # for i in range(0, len(fasta_ids)):
+        #     print("{}\n{}".format(fasta_ids[i], round(gc_content[i], 6)))
+
 
 if __name__ == "__main__":
     GC()
