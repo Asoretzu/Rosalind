@@ -50,23 +50,25 @@ def GC():
 
     with open(file_name, mode="r") as f:
         for line in f:
+            # Check for FASTA IDs
             if line[0] == ">":
                 line = line[1: -1]
                 fasta_ids.append(line)
 
+                # Asign every FASTA CODE
                 if len(fasta_ids) == 1:
                     pass
                 else:
                     fasta_codes.append(string)
                     string = ""
             else:
+                # Concatenate all the FASTA CODE
                 string = string + line[0:-1]
+
+        # Asign the last FASTA CODE
         fasta_codes.append(string)
-        string = ""
 
-    # print(len(fasta_ids))
-    # print(len(fasta_codes))
-
+        # Search for every C and G letter in a FASTA CODE
         for codes in fasta_codes:
             count = 0
             for i in range(0, len(codes)):
@@ -75,12 +77,15 @@ def GC():
                         count = count + 1
             pair_count.append(count)
 
+        # Get the GC CONTENT (%) of G's and C's
         for i in range(0, len(fasta_ids)):
             porcent = ((100 / len(fasta_codes[i])) * pair_count[i])
             gc_content.append(porcent)
 
+        # Print the result
         for i in range(0, len(fasta_ids)):
             print("{}\n{}".format(fasta_ids[i], round(gc_content[i], 6)))
+            print("")
 
 
 if __name__ == "__main__":
