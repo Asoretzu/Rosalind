@@ -52,7 +52,7 @@ def SUBS():
         if motif == dataset[i:i+l]:
             count.append(i+1)
 
-    print(count)
+    print(" ".join(str(n) for n in count))
 
 
 if __name__ == "__main__":
