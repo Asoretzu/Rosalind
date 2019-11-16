@@ -1,2 +1,2 @@
 # Rosalind
-Un pequeño proyecto para resolver los problemas propuestos en Rosalind.info
+A small project to solve the problems proposed in Rosalind.info
