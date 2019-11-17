@@ -42,8 +42,31 @@
 
 
 def IPRB():
-    pass
+    dataset = ""
+    with open("TXT/rosalind_iprb.txt", mode="r") as f:
+        for line in f:
+            dataset = dataset + line[0:-1]
+
+    dataset = dataset.split()
+    d = int(dataset[0])
+    h = int(dataset[1])
+    r = int(dataset[2])
+
+    # d = 2
+    # h = 2
+    # r = 2
+    
+    total = d + h + r
+
+    r_r = (r / total) * ((r - 1) / (total - 1))
+    h_h = (h / total) * ((h - 1) / (total - 1))
+    h_r = (h / total) * (r / (total - 1)) + (r / total) * (h / (total - 1))
+    r_total = r_r + (h_h * 0.25) + (h_r * 0.5)
+
+    prob = 1 - r_total
+
+    print("{}".format(round(prob, 5)))
 
 
-if __name__ == "__name__":
+if __name__ == "__main__":
     IPRB()
