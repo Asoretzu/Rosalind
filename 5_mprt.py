@@ -41,10 +41,11 @@
 # 79 109 135 248 306 348 364 402 485 501 614
 
 
-import requests
+import requests #If you don't have it, downloaded via "pip install requests"
+import os
 
-file_name = "TXT/lalo.txt"
-#file_name = "TXT/rosalind_mprt.txt"
+# file_name = "TXT/lalo.txt"
+file_name = "TXT/rosalind_mprt.txt"
 
 
 def MPRT(dataset):
@@ -70,7 +71,8 @@ def MPRT(dataset):
         if len(motif) > 0:
             print(file)
             print(' '.join(map(str, motif)))
-            # print("")
+
+        os.remove("{}.fasta".format(file))
 
 
 if __name__ == "__main__":
