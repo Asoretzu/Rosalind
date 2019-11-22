@@ -1,10 +1,11 @@
 # ID = "PROT"
 # PROJECT = "Translating RNA into Protein"
 
-# The 20 commonly occurring amino acids are abbreviated by using 20 letters from
-# the English alphabet (all letters except for B, J, O, U, X, and Z). Protein
-# strings are constructed from these 20 symbols. Henceforth, the term genetic
-# string will incorporate protein strings along with DNA strings and RNA strings.
+# The 20 commonly occurring amino acids are abbreviated by using 20 letters
+# from the English alphabet (all letters except for B, J, O, U, X, and Z).
+# Protein strings are constructed from these 20 symbols. Henceforth, the term
+# genetic string will incorporate protein strings along with DNA strings and
+# RNA strings.
 
 # The RNA codon table dictates the details regarding the encoding of specific
 # codons into the amino acid alphabet.
@@ -40,70 +41,17 @@
 
 
 def coding(codon):
-
     # All codons that transcribe aminoacids
-    if codon == "GCU" or codon == "GCC" or codon == "GCA" or codon == "GCG":
-        return "A"
+    with open("data/rna_codons.txt", mode="r") as f:
+        for line in f:
+            if line != "\n":
+                prot = line[0:-1]
+                prot = prot.split()
 
-    if codon == "UGU" or codon == "UGC":
-        return "C"
-
-    if codon == "GAU" or codon == "GAC":
-        return "D"
-
-    if codon == "GAA"  or codon == "GAG":
-        return "E"
-
-    if codon == "UUU" or codon == "UUC":
-        return "F"
-
-    if codon == "GGU" or codon == "GGC" or codon == "GGA" or codon == "GGG":
-        return "G"
-
-    if codon == "CAU" or codon == "CAC":
-        return "H"
-
-    if codon == "AUU" or codon == "AUC" or codon == "AUA":
-        return "I"
-
-    if codon == "AAA" or codon == "AAG":
-        return "K"
-
-    if codon == "CUU" or codon == "CUC" or codon == "UUA" or codon == "CUA" or codon == "UUG" or codon == "CUG":
-        return "L"
-
-    if codon == "AUG":
-        return "M"
-
-    if codon == "AAU" or codon == "AAC":
-        return "N"
-
-    if codon == "CCU" or codon == "CCC" or codon == "CCA" or codon == "CCG":
-        return "P"
-
-    if codon == "CAA" or codon == "CAG":
-        return "Q"
-
-    if codon == "CGU" or codon == "CGC" or codon == "CGA" or codon == "AGA" or codon == "CGG" or codon == "AGG":
-        return "R"
-
-    if codon == "UCU" or codon == "UCA" or codon == "UCC" or codon == "UCG" or codon == "AGU" or codon == "AGC":
-        return "S"
-
-    if codon == "ACU" or codon == "ACC" or codon == "ACA" or codon == "ACG":
-        return "T"
-
-    if codon == "GUU" or codon == "GUC" or codon == "GUA" or codon == "GUG":
-        return "V"
-
-    if codon == "UGG":
-        return "W"
-
-    if codon == "UAU" or codon == "UAC":
-        return "Y"
-
-    if codon == "UAG" or codon == "UAA" or codon == "UGA":
-        return "stop"
+                if prot[1] == "Stop":
+                    return ""
+                if prot[0] == codon:
+                    return prot[1]
 
 
 def PROT():
