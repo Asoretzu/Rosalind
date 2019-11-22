@@ -2,4 +2,4 @@ TXT/
 lalo.py
 _*.py
 *.fasta
-__pycache__
+__pycache__/
