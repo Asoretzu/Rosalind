@@ -1,5 +1,5 @@
 # Get function for single or multiple strings, with or without IDs
-def get_multi(file_name):
+def get(file_name):
     fasta_ids = []
     fasta_codes = []
     string = ""
