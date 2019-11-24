@@ -9,7 +9,13 @@
 
 </div>
 
-<div align="center" style="padding-top: 30px">
+<div>
+  
+  <hr>
+  
+</div>
+
+<div align="center">
   
   ![](https://img.shields.io/badge/-DNA-success.svg)
 
