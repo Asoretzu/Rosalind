@@ -1,6 +1,6 @@
 <h1 align="center">Rosalind</h1>
 
-<h2 align="center">A small project to solve the problems proposed in Rosalind.info</h2>
+<h3 align="center">A small project to solve the problems proposed in Rosalind.info</h3>
 
 <div align="center">
   
@@ -9,7 +9,7 @@
 
 </div>
 
-<div align="center">
+<div align="center" style="padding-top: 10px">
   
   ![](https://img.shields.io/badge/-DNA-success.svg)
 
