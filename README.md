@@ -3,11 +3,14 @@
 <h2 align="center">A small project to solve the problems proposed in Rosalind.info</h2>
 
 <div align="center">
+  
   ![](https://img.shields.io/github/repo-size/asoretzu/Rosalind.svg)
   ![](https://img.shields.io/github/license/Asoretzu/Rosalind.svg)
+
 </div>
 
 <div align="center">
+  
   ![](https://img.shields.io/badge/-DNA-success.svg)
 
   ![](https://img.shields.io/badge/-RNA-lightgray.svg)
@@ -125,4 +128,5 @@
   ![](https://img.shields.io/badge/-OSYM-lightgray.svg)
   ![](https://img.shields.io/badge/-KSIM-lightgray.svg)
   ![](https://img.shields.io/badge/-LAFF-lightgray.svg)
+  
 </div>
