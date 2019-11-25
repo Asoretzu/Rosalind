@@ -3,20 +3,26 @@
 <h3 align="center">A small project to solve the problems proposed in Rosalind.info</h3>
 
 <div align="center">
-  
+
   ![](https://img.shields.io/github/repo-size/asoretzu/Rosalind.svg)
   ![](https://img.shields.io/github/license/Asoretzu/Rosalind.svg)
 
 </div>
 
+
+<div align="center">
+  You can find my Rosalind.info public profile <a href="http://rosalind.info/users/Asoretzu/">here</a>.
+
+</div>
+
 <div>
-  
+
   <hr>
-  
+
 </div>
 
 <div align="center">
-  
+
   ![](https://img.shields.io/badge/-DNA-success.svg)
 
   ![](https://img.shields.io/badge/-RNA-success.svg)
@@ -41,8 +47,8 @@
   ![](https://img.shields.io/badge/-ORF-success.svg)
   ![](https://img.shields.io/badge/-SPLC-success.svg)
   ![](https://img.shields.io/badge/-LCSM-lightgray.svg)
-  ![](https://img.shields.io/badge/-PERM-lightgray.svg)
-  ![](https://img.shields.io/badge/-REVP-lightgray.svg)
+  ![](https://img.shields.io/badge/-PERM-success.svg)
+  ![](https://img.shields.io/badge/-REVP-success.svg)
 
   ![](https://img.shields.io/badge/-PMCH-lightgray.svg)
   ![](https://img.shields.io/badge/-PPER-lightgray.svg)
@@ -134,5 +140,5 @@
   ![](https://img.shields.io/badge/-OSYM-lightgray.svg)
   ![](https://img.shields.io/badge/-KSIM-lightgray.svg)
   ![](https://img.shields.io/badge/-LAFF-lightgray.svg)
-  
+
 </div>
