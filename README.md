@@ -46,7 +46,7 @@
   ![](https://img.shields.io/badge/-CONS-success.svg)
   ![](https://img.shields.io/badge/-ORF-success.svg)
   ![](https://img.shields.io/badge/-SPLC-success.svg)
-  ![](https://img.shields.io/badge/-LCSM-lightgray.svg)
+  ![](https://img.shields.io/badge/-LCSM-success.svg)
   ![](https://img.shields.io/badge/-PERM-success.svg)
   ![](https://img.shields.io/badge/-REVP-success.svg)
 
