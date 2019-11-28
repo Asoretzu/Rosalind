@@ -9,7 +9,7 @@
 
 </div>
 
-<h3 align="center">A small project to solve the problems proposed in the Bioinformatics Stronghold problem set, in <a href="http://rosalind.info/problems/locations/">Rosalind.info</a></h3>
+<h3 align="center">A small project to solve the problems proposed in the Bioinformatics Stronghold problem set, in <a href="http://rosalind.info/problems/locations/">Rosalind.info</a>.</h3>
 
 <div align="center">
   You can find my Rosalind.info public profile <a href="http://rosalind.info/users/Asoretzu/">here</a>.
