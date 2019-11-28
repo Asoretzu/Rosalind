@@ -1,10 +1,10 @@
-<h1 align="center">Rosalind</h1>
+<h1 align="center">Rosalind - Bioinformatics Stronghold</h1>
 
 <h3 align="center">A small project to solve the problems proposed in Rosalind.info</h3>
 
 <div align="center">
 
-  ![](https://img.shields.io/github/repo-size/asoretzu/Rosalind.svg)
+  ![](https://img.shields.io/github/repo-size/asoretzu/rosalind-stronghold.svg)
   ![](https://img.shields.io/github/license/Asoretzu/Rosalind.svg)
 
 </div>
