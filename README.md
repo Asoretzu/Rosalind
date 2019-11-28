@@ -58,7 +58,7 @@
   ![](https://img.shields.io/badge/-SSEQ-lightgray.svg)
   ![](https://img.shields.io/badge/-TRAN-lightgray.svg)
   ![](https://img.shields.io/badge/-LEXF-lightgray.svg)
-  ![](https://img.shields.io/badge/-LGIS-lightgray.svg)
+  ![](https://img.shields.io/badge/-LGIS-success.svg)
   ![](https://img.shields.io/badge/-SIGN-lightgray.svg)
 
   ![](https://img.shields.io/badge/-MMCH-lightgray.svg)
