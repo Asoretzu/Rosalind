@@ -46,7 +46,7 @@
   [![](https://img.shields.io/badge/-PERM-success.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/5_perm.py)
   [![](https://img.shields.io/badge/-REVP-success.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/5_revp.py)
 
-  [![](https://img.shields.io/badge/-PMCH-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/6_pmch.py)
+  [![](https://img.shields.io/badge/-PMCH-success.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/6_pmch.py)
   [![](https://img.shields.io/badge/-PPER-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/6_pper.py)
   [![](https://img.shields.io/badge/-TREE-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/6_tree.py)
   [![](https://img.shields.io/badge/-PROB-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/6_prob.py)
