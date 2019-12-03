@@ -19,8 +19,13 @@
 # Sample Output
 # 20 12 17 21
 
-def DNA():
-    dna = "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC"
+
+from services import fasta
+
+
+def dna(file_name):
+    dna = fasta.get(file_name)
+
     a = 0
     c = 0
     g = 0
@@ -39,6 +44,3 @@ def DNA():
             pass
 
     print("{} {} {} {}".format(a, c, g, t))
-
-if __name__ == "__main__":
-    DNA()

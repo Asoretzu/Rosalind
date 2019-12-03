@@ -20,22 +20,22 @@
 # ACCGGGTTTT
 
 
-def REVC():
-    dna = "AAAACCCGGT"
-    rdna = dna[:: -1]
-    cdna = ""
+from services import fasta
 
-    for nt in rdna:
+
+def revc(file_name):
+    dna = fasta.get(file_name)
+    rev_dna = dna[:: -1]
+    com_dna = ""
+
+    for nt in rev_dna:
         if nt == "A":
-            cdna = cdna + "T"
+            com_dna = com_dna + "T"
         elif nt == "C":
-            cdna = cdna + "G"
+            com_dna = com_dna + "G"
         elif nt == "T":
-            cdna = cdna + "A"
+            com_dna = com_dna + "A"
         elif nt == "G":
-            cdna = cdna + "C"
+            com_dna = com_dna + "C"
 
-    print(cdna)
-
-if __name__ == "__main__":
-    REVC()
+    print(com_dna)

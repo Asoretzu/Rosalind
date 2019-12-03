@@ -18,8 +18,11 @@
 # GAUGGAACUUGACUACGUAAAUU
 
 
-def RNA():
-    dna = "GATGGAACTTGACTACGTAAATT"
+from services import fasta
+
+
+def rna(file_name):
+    dna = fasta.get(file_name)
     rna = ""
 
     for nt in dna:
@@ -29,7 +32,3 @@ def RNA():
             rna = rna + nt
 
     print(rna)
-
-
-if __name__ == "__main__":
-    RNA()
