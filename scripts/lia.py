@@ -10,13 +10,13 @@
 # are respective events for X and Y, A and B are independent
 # (i.e., Pr(A and B)=Pr(A)×Pr(B) ).
 
-# As an example of how helpful independence can be for calculating probabilities,
-# let X and Y represent the numbers showing on two six-sided dice. Intuitively,
-# the number of pips showing on one die should not affect the number showing on
-# the other die. If we want to find the probability that X+Y is odd, then we
-# don't need to draw a tree diagram and consider all possibilities. We simply
-# first note that for X+Y to be odd, either X is even and Y is odd or X is odd
-# and Y is even. In terms of probability,
+# As an example of how helpful independence can be for calculating
+# probabilities, let X and Y represent the numbers showing on two six-sided
+# dice. Intuitively, the number of pips showing on one die should not affect
+# the number showing on the other die. If we want to find the probability that
+# X+Y is odd, then we don't need to draw a tree diagram and consider all
+# possibilities. We simply first note that for X+Y to be odd, either X is even
+# and Y is odd or X is odd and Y is even. In terms of probability,
 # Pr(X+Y is odd)=Pr(X is even and Y is odd)+Pr(X is odd and Y is even).
 # Using independence, this becomes
 # [Pr(X is even)×Pr(Y is odd)]+[Pr(X is odd)×Pr(Y is even)], or
@@ -25,8 +25,8 @@
 
 # Given: Two positive integers k (k≤7) and N (N≤2k). In this problem, we begin
 # with Tom, who in the 0th generation has genotype Aa Bb. Tom has two children
-# in the 1st generation, each of whom has two children, and so on. Each organism
-# always mates with an organism having genotype Aa Bb.
+# in the 1st generation, each of whom has two children, and so on. Each
+# organism always mates with an organism having genotype Aa Bb.
 
 # Return: The probability that at least N Aa Bb organisms will belong to the
 # k-th generation of Tom's family tree (don't count the Aa Bb mates at each
@@ -39,11 +39,11 @@
 # 0.684
 
 
-# file_name = "TXT/lalo.txt"
-file_name = "TXT/rosalind_lia.txt"
+from services import fasta
 
 
-def fact(value):
+# Return the factorial of a given number
+def _fac(value):
     fac = 1
 
     for i in range(1, value+1):
@@ -52,28 +52,18 @@ def fact(value):
     return fac
 
 
-def LIA(k, N):
+def lia(file_name):
+    data = fasta.get(file_name)
+    data = data.split()
+
+    k = int(data[0])
+    N = int(data[1])
+
     r = 2**k
     total = 0
 
     for i in range(N, r+1):
-        prob = (fact(r) / (fact(i) * fact(r - i))) * (0.25**i) * (0.75**(r-i))
+        prob = (_fac(r) / (_fac(i) * _fac(r - i))) * (0.25**i) * (0.75**(r-i))
         total = total + prob
 
     print(round(total, 3))
-
-
-
-if __name__ == "__main__":
-    dataset = ""
-
-    with open(file_name, mode="r") as f:
-        for line in f:
-            dataset = dataset + line[0:-1]
-
-    dataset = dataset.split()
-
-    k = int(dataset[0])
-    N = int(dataset[1])
-
-    LIA(k, N)

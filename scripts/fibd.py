@@ -7,9 +7,10 @@
 # pair of offspring (one male, one female) each subsequent month.
 
 # Our aim is to somehow modify this recurrence relation to achieve a dynamic
-# programming solution in the case that all rabbits die out after a fixed number
-# of months. See Figure 4 for a depiction of a rabbit tree in which rabbits live
-# for three months (meaning that they reproduce only twice before dying).
+# programming solution in the case that all rabbits die out after a fixed
+# number of months. See Figure 4 for a depiction of a rabbit tree in which
+# rabbits live for three months (meaning that they reproduce only twice before
+# dying).
 
 # Given: Positive integers n≤100 and m≤20.
 
@@ -23,10 +24,16 @@
 # 4
 
 
-dataset_file = "TXT/rosalind_fibd.txt"
+from services import fasta
 
 
-def FIB(n, m):
+def fibd(file_name):
+    data = fasta.get(file_name)
+    data = data.split()
+
+    n = int(data[0])
+    m = int(data[1])
+
     offspring = 0
 
     pairs = []
@@ -37,8 +44,6 @@ def FIB(n, m):
 
     pairs.append(1)
 
-    # print(pairs)
-
     # Get the pairs of each month
     for i in range(0, n-1):
         for j in range(0, m-1):
@@ -48,25 +53,9 @@ def FIB(n, m):
         pairs.pop(0)
         offspring = 0
 
-        # print(pairs)
-
     # Get the sum of all the pairs
     total = 0
     for i in range(0, len(pairs)):
         total = total + pairs[i]
 
     print(total)
-
-
-if __name__ == "__main__":
-    dataset = ""
-
-    with open(dataset_file, mode="r") as f:
-        for line in f:
-            dataset = dataset + line[0:-1]
-
-    dataset = dataset.split()
-
-    n = int(dataset[0])
-    m = int(dataset[1])
-    FIB(n, m)

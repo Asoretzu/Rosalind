@@ -18,9 +18,9 @@
 
 # Given: A protein string of length at most 1000 aa.
 
-# Return: The total number of different RNA strings from which the protein could
-# have been translated, modulo 1,000,000. (Don't neglect the importance of the
-# stop codon in protein translation.)
+# Return: The total number of different RNA strings from which the protein
+# could have been translated, modulo 1,000,000. (Don't neglect the importance
+# of the stop codon in protein translation.)
 
 # Sample Dataset
 # MA
@@ -29,72 +29,19 @@
 # 12
 
 
-def get_protein():
-    dataset = ""
-    with open("TXT/rosalind_mrna.txt", mode="r") as f:
-        for line in f:
-            dataset = dataset + line[0:-1]
-
-    return dataset
+from services import fasta
+from services.translate import possible_codons
 
 
-def aminos(amino):
-    if amino == "A":
-        return 4
-    if amino == "C":
-        return 2
-    if amino == "D":
-        return 2
-    if amino == "E":
-        return 2
-    if amino == "F":
-        return 2
-    if amino == "G":
-        return 4
-    if amino == "H":
-        return 2
-    if amino == "I":
-        return 3
-    if amino == "K":
-        return 2
-    if amino == "L":
-        return 6
-    if amino == "M":
-        return 1
-    if amino == "N":
-        return 2
-    if amino == "P":
-        return 4
-    if amino == "Q":
-        return 2
-    if amino == "R":
-        return 6
-    if amino == "S":
-        return 6
-    if amino == "T":
-        return 4
-    if amino == "V":
-        return 4
-    if amino == "W":
-        return 1
-    if amino == "Y":
-        return 2
+def mrna(file_name):
+    data = fasta.get("txt/rosalind_mrna.txt")
 
-
-def MRNA(dataset):
     a = 1
 
-    for amino in dataset:
-        a = a * aminos(amino)
+    for amino in data:
+        a = a * possible_codons(amino)
 
     # Add the Stop codon
     a = a * 3
 
     print(a % 1000000)
-
-
-if __name__ == "__main__":
-
-    dataset = get_protein()
-
-    MRNA(dataset)
