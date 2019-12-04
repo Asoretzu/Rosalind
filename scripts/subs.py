@@ -1,16 +1,16 @@
 # ID = "SUBS"
-
 # PROJECT = "Finding a Motif in DNA"
 
 # Given two strings s and t, t is a substring of s if t is contained as a
-# contiguous collection of symbols in s (as a result, t must be no longer than s).
+# contiguous collection of symbols in s (as a result, t must be no longer than
+# s).
 
 # The position of a symbol in a string is the total number of symbols found to
 # its left, including itself (e.g., the positions of all occurrences of 'U' in
 # "AUGCUUCAGAAAGGUCUUACG" are 2, 5, 6, 15, 17, and 18). The symbol at position
 # i of s is denoted by s[i].
 
-#A substring of s can be represented as s[j:k], where j and k represent
+# A substring of s can be represented as s[j:k], where j and k represent
 # the starting and ending positions of the substring in s; for example, if s =
 # "AUGCUUCAGAAAGGUCUUACG", then s[2:5] = "UGCU".
 
@@ -30,30 +30,22 @@
 # 2 4 10
 
 
-def SUBS():
-    dataset = ""
-    motif = ""
-    strings = []
-    with open("TXT/rosalind_subs.txt", mode="r") as f:
-        for line in f:
-            strings.append(line[0:-1])
+from services import fasta
 
-        dataset = dataset + strings[0]
-        motif = motif + strings[1]
 
-    # dataset = "GATATATGCATATACTT"
-    # motif = "ATAT"
+def subs(file_name):
+    data = fasta.get(file_name, remove_new_line=False)
+    data = data.split()
 
-    l = len(motif)
+    dataset = data[0]
+    motif = data[1]
+
+    length = len(motif)
     count = []
 
     # Search for motifs in the dataset
     for i in range(0, len(dataset)):
-        if motif == dataset[i:i+l]:
+        if motif == dataset[i:i+length]:
             count.append(i+1)
 
     print(" ".join(str(n) for n in count))
-
-
-if __name__ == "__main__":
-    SUBS()

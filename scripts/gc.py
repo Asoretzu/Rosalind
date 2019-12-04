@@ -19,9 +19,9 @@
 # Given: At most 10 DNA strings in FASTA format (of length at most 1 kbp each).
 
 # Return: The ID of the string having the highest GC-content, followed by the
-# GC-content of that string. Rosalind allows for a default error of 0.001 in all
-# decimal answers unless otherwise stated; please see the note on absolute error
-# below.
+# GC-content of that string. Rosalind allows for a default error of 0.001 in
+# all decimal answers unless otherwise stated; please see the note on absolute
+# error below.
 
 # Sample Dataset
 
@@ -38,55 +38,36 @@
 # 60.919540
 
 
-file_name = "TXT/rosalind_gc.txt"
+from services import fasta
 
 
-def GC():
-    fasta_ids = []
-    fasta_codes = []
+def gc(file_name):
+    data = fasta.get(file_name)
+
+    fasta_ids = data[0]
+    fasta_codes = data[1]
+
     pair_count = []
     gc_content = []
-    string = ""
 
-    with open(file_name, mode="r") as f:
-        for line in f:
-            # Check for FASTA IDs
-            if line[0] == ">":
-                line = line[1: -1]
-                fasta_ids.append(line)
+    # Search for every C and G letter in a FASTA CODE
+    for codes in fasta_codes:
+        count = 0
+        for i in range(0, len(codes)):
+            code = codes[i]
+            if code == "G" or code == "C":
+                count = count + 1
+        pair_count.append(count)
 
-                # Asign every FASTA CODE
-                if len(fasta_ids) == 1:
-                    pass
-                else:
-                    fasta_codes.append(string)
-                    string = ""
-            else:
-                # Concatenate all the FASTA CODE
-                string = string + line[0:-1]
+    # Get the GC CONTENT (%) of G's and C's
+    for i in range(0, len(fasta_ids)):
+        porcent = ((100 / len(fasta_codes[i])) * pair_count[i])
+        gc_content.append(porcent)
 
-        # Asign the last FASTA CODE
-        fasta_codes.append(string)
+    high = max(gc_content)
 
-        # Search for every C and G letter in a FASTA CODE
-        for codes in fasta_codes:
-            count = 0
-            for i in range(0, len(codes)):
-                    code = codes[i]
-                    if code == "G" or code == "C":
-                        count = count + 1
-            pair_count.append(count)
-
-        # Get the GC CONTENT (%) of G's and C's
-        for i in range(0, len(fasta_ids)):
-            porcent = ((100 / len(fasta_codes[i])) * pair_count[i])
-            gc_content.append(porcent)
-
-        # Print the result
-        for i in range(0, len(fasta_ids)):
+    # Print the result
+    for i in range(0, len(fasta_ids)):
+        if gc_content[i] == high:
             print("{}\n{}".format(fasta_ids[i], round(gc_content[i], 6)))
-            print("")
-
-
-if __name__ == "__main__":
-    GC()
+            break

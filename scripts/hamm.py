@@ -2,8 +2,9 @@
 # PROJECT = "Counting Point Mutations"
 
 
-# Given two strings s and t of equal length, the Hamming distance between s and t,
-# denoted dH(s,t), is the number of corresponding symbols that differ in s and t.
+# Given two strings s and t of equal length, the Hamming distance between s and
+# t, denoted dH(s,t), is the number of corresponding symbols that differ in s
+# and t.
 
 # Given: Two DNA strings s and t of equal length (not exceeding 1 kbp).
 
@@ -17,26 +18,21 @@
 # 7
 
 
-def HAMM():
-    # code1 = "GAGCCTACTAACGGGAT"
-    # code2 = "CATCGTAATGACGGCCT"
-    dataset = []
-    mutations = 0
+from services import fasta
 
-    with open("TXT/rosalind_hamm.txt", mode="r") as f:
-        for line in f:
-            dataset.append(line[0:-1])
 
-    code1 = dataset[0]
-    code2 = dataset[1]
+def hamm(file_name):
+    data = fasta.get(file_name, remove_new_line=False)
+    data = data.split()
+
+    code1 = data[0]
+    code2 = data[1]
     length = len(code1)
 
+    mutations = 0
 
     for i in range(0, length):
         if code1[i] != code2[i]:
             mutations = mutations + 1
 
     print(mutations)
-
-if __name__ == "__main__":
-    HAMM()

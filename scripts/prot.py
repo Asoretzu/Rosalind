@@ -33,45 +33,27 @@
 # UGA Stop   CGA R      AGA R      GGA G
 # UGG W      CGG R      AGG R      GGG G
 
-# Sample Dataset
+# Sample data
 # AUGGCCAUGGCGCCCAGAACUGAGAUCAAUAGUACCCGUAUUAACGGGUGA
 
 # Sample Output
 # MAMAPRTEINSTRING
 
 
-def coding(codon):
-    # All codons that transcribe aminoacids
-    with open("data/rna_codons.txt", mode="r") as f:
-        for line in f:
-            if line != "\n":
-                prot = line[0:-1]
-                prot = prot.split()
-
-                if prot[1] == "Stop":
-                    return ""
-                if prot[0] == codon:
-                    return prot[1]
+from services import fasta
+from services import translate
 
 
-def PROT():
-    dataset = ""
-    # dataset = "AUGGCCAUGGCGCCCAGAACUGAGAUCAAUAGUACCCGUAUUAACGGGUGA"
+def prot(file_name):
+    data = fasta.get(file_name)
+
     protein = ""
 
-    with open("TXT/rosalind_prot.txt", mode="r") as f:
-        for line in f:
-            dataset = dataset + line
-
     # Get the mRNA to translate to protein
-    for i in range(0, len(dataset)-1, 3):
-        codon = dataset[i] + dataset[i+1] + dataset[i+2]
-        c = coding(codon)
+    for i in range(0, len(data)-1, 3):
+        codon = data[i] + data[i+1] + data[i+2]
+        c = translate.to_protein(codon)
         if c != "stop":
             protein = protein + c
 
     print(protein)
-
-
-if __name__ == "__main__":
-    PROT()

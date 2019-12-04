@@ -1,5 +1,5 @@
 # Get function for single or multiple strings, with or without IDs
-def get(file_name):
+def get(file_name, remove_new_line=True):
     fasta_ids = []
     fasta_codes = []
     string = ""
@@ -19,7 +19,10 @@ def get(file_name):
                     string = ""
             else:
                 # Concatenate all the FASTA CODE
-                string = string + line[0:-1]
+                if remove_new_line:
+                    string = string + line[0:-1]
+                else:
+                    string = string + line
 
         # Asign the last FASTA CODE
         fasta_codes.append(string)

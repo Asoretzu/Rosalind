@@ -1,10 +1,10 @@
 # ID = "IPRB"
 # PROJECT = "Mendel's First Law"
 
-# Probability is the mathematical study of randomly occurring phenomena. We will
-# model such a phenomenon with a random variable, which is simply a variable
-# that can take a number of different distinct outcomes depending on the result
-# of an underlying random process.
+# Probability is the mathematical study of randomly occurring phenomena. We
+# will model such a phenomenon with a random variable, which is simply a
+# variable that can take a number of different distinct outcomes depending on
+# the result of an underlying random process.
 
 # For example, say that we have a bag containing 3 red balls and 2 blue balls.
 # If we let X represent the random variable corresponding to the color of a
@@ -15,10 +15,11 @@
 # the ball example, let Y model the color of a second ball drawn from the bag
 # (without replacing the first ball). The probability of Y being red depends on
 # whether the first ball was red or blue. To represent all outcomes of X and Y,
-# we therefore use a probability tree diagram. This branching diagram represents
-# all possible individual probabilities for X and Y, with outcomes at the
-# endpoints ("leaves") of the tree. The probability of any outcome is given by
-# the product of probabilities along the path from the beginning of the tree.
+# we therefore use a probability tree diagram. This branching diagram
+# represents all possible individual probabilities for X and Y, with outcomes
+# at the endpoints ("leaves") of the tree. The probability of any outcome is
+# given by the product of probabilities along the path from the beginning of
+# the tree.
 
 # An event is simply a collection of outcomes. Because outcomes are distinct,
 # the probability of an event can be written as the sum of the probabilities of
@@ -41,21 +42,17 @@
 # 0.78333
 
 
-def IPRB():
-    dataset = ""
-    with open("TXT/rosalind_iprb.txt", mode="r") as f:
-        for line in f:
-            dataset = dataset + line[0:-1]
+from services import fasta
 
-    dataset = dataset.split()
-    d = int(dataset[0])
-    h = int(dataset[1])
-    r = int(dataset[2])
 
-    # d = 2
-    # h = 2
-    # r = 2
-    
+def iprb(file_name):
+    data = fasta.get(file_name)
+    data = data.split()
+
+    d = int(data[0])
+    h = int(data[1])
+    r = int(data[2])
+
     total = d + h + r
 
     r_r = (r / total) * ((r - 1) / (total - 1))
@@ -66,7 +63,3 @@ def IPRB():
     prob = 1 - r_total
 
     print("{}".format(round(prob, 5)))
-
-
-if __name__ == "__main__":
-    IPRB()

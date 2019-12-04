@@ -1,3 +1,17 @@
+# Get all the codons that transcribe aminoacids
+def _coding(codon):
+    with open("data/rna_codons.txt", mode="r") as f:
+        for line in f:
+            if line != "\n":
+                prot = line[0:-1]
+                prot = prot.split()
+
+                if prot[1] == "Stop":
+                    return ""
+                if prot[0] == codon:
+                    return prot[1]
+
+
 # Get the DNA string and translate it to mRNA
 def to_rna(dna):
     rna = ""
@@ -22,17 +36,3 @@ def to_protein(rna):
             protein = protein + c
 
     return(protein)
-
-
-# Get all the codons that transcribe aminoacids
-def _coding(codon):
-    with open("data/rna_codons.txt", mode="r") as f:
-        for line in f:
-            if line != "\n":
-                prot = line[0:-1]
-                prot = prot.split()
-
-                if prot[1] == "Stop":
-                    return ""
-                if prot[0] == codon:
-                    return prot[1]
