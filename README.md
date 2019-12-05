@@ -55,7 +55,7 @@
   [![](https://img.shields.io/badge/-TRAN-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/tran.py)
   [![](https://img.shields.io/badge/-LEXF-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/lexf.py)
   [![](https://img.shields.io/badge/-LGIS-success.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/lgis.py)
-  [![](https://img.shields.io/badge/-SIGN-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/sign.py)
+  [![](https://img.shields.io/badge/-SIGN-success.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/sign.py)
 
   [![](https://img.shields.io/badge/-MMCH-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/mmch.py)
   [![](https://img.shields.io/badge/-INOD-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/inod.py)
