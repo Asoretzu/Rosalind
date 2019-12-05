@@ -19,7 +19,9 @@
 
 <div align="center">
 
-  The status of all the 105 problems proposed in the Bioinformatics Stronghold problem set (green: finished; gray: in progress).
+  The status of all the 105 problems proposed in the Bioinformatics Stronghold problem set.
+
+  (green: finished; gray: in progress)
 
   [![](https://img.shields.io/badge/-DNA-success.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/dna.py)
 
