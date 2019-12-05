@@ -30,7 +30,7 @@
 
 
 from services import fasta
-from services.translate import possible_codons
+from services.search import possible_codons
 
 
 def mrna(file_name):

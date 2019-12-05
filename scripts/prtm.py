@@ -1,9 +1,10 @@
 # ID = "PRTM"
 # PROJECT = "Calculating Protein Mass"
 
-# In a weighted alphabet, every symbol is assigned a positive real number called
-# a weight. A string formed from a weighted alphabet is called a weighted string,
-# and its weight is equal to the sum of the weights of its symbols.
+# In a weighted alphabet, every symbol is assigned a positive real number
+# called a weight. A string formed from a weighted alphabet is called a
+# weighted string, and its weight is equal to the sum of the weights of its
+# symbols.
 
 # The standard weight assigned to each member of the 20-symbol amino acid
 # alphabet is the monoisotopic mass of the corresponding amino acid.
@@ -40,67 +41,14 @@
 # Y   163.06333
 
 
-# file_name = "TXT/lalo.txt"
-file_name = "TXT/rosalind_prtm.txt"
+from services import fasta
+from services.search import amino_mass
 
 
-def amino_mass(amino):
-    if amino == "A":
-        return 71.03711
-    if amino == "C":
-        return 103.00919
-    if amino == "D":
-        return 115.02694
-    if amino == "E":
-        return 129.04259
-    if amino == "F":
-        return 147.06841
-    if amino == "G":
-        return 57.02146
-    if amino == "H":
-        return 137.05891
-    if amino == "I":
-        return 113.08406
-    if amino == "K":
-        return 128.09496
-    if amino == "L":
-        return 113.08406
-    if amino == "M":
-        return 131.04049
-    if amino == "N":
-        return 114.04293
-    if amino == "P":
-        return 97.05276
-    if amino == "Q":
-        return 128.05858
-    if amino == "R":
-        return 156.10111
-    if amino == "S":
-        return 87.03203
-    if amino == "T":
-        return 101.04768
-    if amino == "V":
-        return 99.06841
-    if amino == "W":
-        return 186.07931
-    if amino == "Y":
-        return 163.06333
-
-
-def PRTM(dataset):
+def prtm(file_name):
+    data = fasta.get(file_name)
     mass = 0
-    for amino in dataset:
+    for amino in data:
         mass = mass + amino_mass(amino)
 
     print(round(mass, 3))
-
-
-if __name__ == "__main__":
-    dataset = ""
-    # dataset = "SKADYEK"
-
-    with open(file_name, mode="r") as f:
-        for line in f:
-            dataset = dataset + line[0:-1]
-
-    PRTM(dataset)
