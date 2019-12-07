@@ -1,5 +1,5 @@
 # Get all the codons that transcribe aminoacids
-def _coding(codon):
+def coding(codon):
     with open("data/rna_codons.txt", mode="r") as f:
         for line in f:
             if line != "\n":
@@ -31,7 +31,7 @@ def to_protein(rna):
 
     for i in range(0, len(rna)-1, 3):
         codon = rna[i] + rna[i+1] + rna[i+2]
-        c = _coding(codon)
+        c = coding(codon)
         if c != "stop":
             protein = protein + c
 

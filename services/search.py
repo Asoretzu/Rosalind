@@ -17,3 +17,20 @@ def amino_mass(amino):
 
             if amino == prot[0]:
                 return float(prot[1])
+
+
+def complement(rna):
+    r_rna = ""
+
+    for amino in rna:
+        if amino == "A":
+            r_rna = r_rna + "U"
+        elif amino == "U":
+            r_rna = r_rna + "A"
+        elif amino == "G":
+            r_rna = r_rna + "C"
+        elif amino == "C":
+            r_rna = r_rna + "G"
+
+    r_rna = r_rna[::-1]
+    return r_rna
