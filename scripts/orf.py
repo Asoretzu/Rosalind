@@ -1,92 +1,58 @@
-# ID = "ORF"
-# PROJECT = "Open Reading Frames"
-
-# Either strand of a DNA double helix can serve as the coding strand for RNA
-# transcription. Hence, a given DNA string implies six total reading frames, or
-# ways in which the same region of DNA can be translated into amino acids:
-# three reading frames result from reading the string itself, whereas three
-# more result from reading its reverse complement.
-
-# An open reading frame (ORF) is one which starts from the start codon and ends
-# by stop codon, without any other stop codons in between. Thus, a candidate
-# protein string is derived by translating an open reading frame into amino
-# acids until a stop codon is reached.
-
-# Given: A DNA string s of length at most 1 kbp in FASTA format.
-
-# Return: Every distinct candidate protein string that can be translated from
-# ORFs of s. Strings can be returned in any order.
+from services import fasta
+from services import translate
+from services import search
 
 
-# Sample Dataset
+def orf(file_name):
+    """
+    Prints every distinct candidate protein string that can be translated from
+    ORFs of a given string.
 
-# >Rosalind_99
-# AGCCATGTAGCTAACTCAGGTTACATGGGGATGACCCCGCGACTTGGATTAGAGTCTCTTTTGGAATAAGCCTGAATGATCCGAGTAGCATCTCAG
-
-# Sample Output
-
-# MLLGSFRLIPKETLIQVAGSSPCNLS
-# M
-# MGMTPRLGLESLLE
-#   MTPRLGLESLLE
+    Keyword argument:
+    file_name -- The path of the txt file to be parsed.
 
 
-# start codon: AUG
-# stop codon: UAG UGA UAA
+    Open Reading Frames
+
+    Either strand of a DNA double helix can serve as the coding strand for RNA
+    transcription. Hence, a given DNA string implies six total reading frames,
+    or ways in which the same region of DNA can be translated into amino acids:
+    three reading frames result from reading the string itself, whereas three
+    more result from reading its reverse complement.
+
+    An open reading frame (ORF) is one which starts from the start codon and
+    ends by stop codon, without any other stop codons in between. Thus, a
+    candidate protein string is derived by translating an open reading frame
+    into amino acids until a stop codon is reached.
+
+    Given: A DNA string s of length at most 1 kbp in FASTA format.
+
+    Return: Every distinct candidate protein string that can be translated from
+    ORFs of s. Strings can be returned in any order.
 
 
-# file_name = "TXT/lalo.txt"
-file_name = "TXT/rosalind_orf.txt"
+    Sample Dataset
+
+    >Rosalind_99
+    AGCCATGTAGCTAACTCAGGTTACATGGGGATGACCCCGCGACTTGGATTAGAGTCTCTTTTGGAATAAGCCTGA
+    ATGATCCGAGTAGCATCTCAG
 
 
-def rna_trans(dna):
-    rna = ""
+    Sample Output
 
-    for nt in dna:
-        if nt == "T":
-            rna = rna + "U"
-        else:
-            rna = rna + nt
+    MLLGSFRLIPKETLIQVAGSSPCNLS
+    M
+    MGMTPRLGLESLLE
+    MTPRLGLESLLE
+    """
 
-    return(rna)
+    dna = fasta.get(file_name)
+    rna = translate.to_rna(dna[1])
 
-
-def complement(rna):
-    r_rna = ""
-
-    for amino in rna:
-        if amino == "A":
-            r_rna = r_rna + "U"
-        elif amino == "U":
-            r_rna = r_rna + "A"
-        elif amino == "G":
-            r_rna = r_rna + "C"
-        elif amino == "C":
-            r_rna = r_rna + "G"
-
-    r_rna = r_rna[::-1]
-    return r_rna
-
-
-def coding(codon):
-    # All codons that transcribe aminoacids
-    with open("data/rna_codons.txt", mode="r") as f:
-        for line in f:
-            if line != "\n":
-                prot = line[0:-1]
-                prot = prot.split()
-
-                if prot[1] == "Stop":
-                    return ""
-                if prot[0] == codon:
-                    return prot[1]
-
-
-def ORF(rna):
     start = []
     protein = ""
     to_print = False
-    r_rna = complement(rna)
+    r_rna = search.complement(rna)
     data = [rna, r_rna]
     proteins = []
 
@@ -100,7 +66,7 @@ def ORF(rna):
         for i in start:
             for j in range(i, len(d)-2, 3):
                 codon = d[j] + d[j+1] + d[j+2]
-                c = coding(codon)
+                c = translate.coding(codon)
 
                 # If the codon is a Stop codon, then the string can be stored
                 if codon == "UAG" or codon == "UGA" or codon == "UAA":
@@ -116,17 +82,6 @@ def ORF(rna):
             start = []
 
     proteins = set(proteins)
+
     for element in proteins:
         print(element)
-
-
-if __name__ == "__main__":
-    dna = ""
-
-    with open(file_name, mode="r") as f:
-        for line in f:
-            if line[0] != ">":
-                dna = dna + line[0:-1]
-
-    rna = rna_trans(dna)
-    ORF(rna)
