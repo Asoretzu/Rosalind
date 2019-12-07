@@ -4,7 +4,8 @@ from services import fasta
 def cons(file_name):
     """
     Prints a consensus string and a profile matrix of every A, C, T, G bases.
-    Keyword arguments:
+
+    Keyword argument:
     file_name -- The path of the txt file to be parsed.
 
 
