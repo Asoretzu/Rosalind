@@ -36,3 +36,19 @@ def to_protein(rna):
             protein = protein + c
 
     return(protein)
+
+
+# Get the complement string of a given base string.
+def complement(r_p):
+    trans = ""
+
+    for i in range(0, len(r_p)):
+        if r_p[i] == "A":
+            trans = trans + "T"
+        elif r_p[i] == "T":
+            trans = trans + "A"
+        elif r_p[i] == "G":
+            trans = trans + "C"
+        elif r_p[i] == "C":
+            trans = trans + "G"
+    return trans
