@@ -3,7 +3,7 @@
 <div align="center">
 
   [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
-  [![](https://img.shields.io/badge/Progress-25%2F105-blue)](https://github.com/Asoretzu/rosalind-stronghold)
+  [![](https://img.shields.io/badge/Progress-26%2F105-blue)](https://github.com/Asoretzu/rosalind-stronghold)
   [![](https://img.shields.io/github/repo-size/asoretzu/rosalind-stronghold.svg)](https://github.com/Asoretzu/rosalind-stronghold)
   [![](https://img.shields.io/github/license/Asoretzu/Rosalind.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/LICENSE.md)
 
@@ -21,7 +21,7 @@
 
   The status of all the 105 problems proposed in the Bioinformatics Stronghold problem set.
 
-  (green: finished; gray: in progress)
+  (green: available; yellow: in progress; grey: not available)
 
   [![](https://img.shields.io/badge/-DNA-success.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/dna.py)
 
@@ -51,28 +51,28 @@
   [![](https://img.shields.io/badge/-REVP-success.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/revp.py)
 
   [![](https://img.shields.io/badge/-PMCH-success.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/pmch.py)
-  [![](https://img.shields.io/badge/-PPER-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/pper.py)
-  [![](https://img.shields.io/badge/-TREE-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/tree.py)
-  [![](https://img.shields.io/badge/-PROB-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/prob.py)
-  [![](https://img.shields.io/badge/-LONG-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/long.py)
-  [![](https://img.shields.io/badge/-SSEQ-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/sseo.py)
-  [![](https://img.shields.io/badge/-TRAN-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/tran.py)
-  [![](https://img.shields.io/badge/-LEXF-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/lexf.py)
+  [![](https://img.shields.io/badge/-PPER-yellow.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/pper.py)
+  [![](https://img.shields.io/badge/-TREE-success.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/tree.py)
+  [![](https://img.shields.io/badge/-PROB-yellow.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/prob.py)
+  [![](https://img.shields.io/badge/-LONG-yellow.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/long.py)
+  [![](https://img.shields.io/badge/-SSEQ-yellow.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/sseo.py)
+  [![](https://img.shields.io/badge/-TRAN-yellow.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/tran.py)
+  [![](https://img.shields.io/badge/-LEXF-yellow.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/lexf.py)
   [![](https://img.shields.io/badge/-LGIS-success.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/lgis.py)
   [![](https://img.shields.io/badge/-SIGN-success.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/sign.py)
 
   [![](https://img.shields.io/badge/-MMCH-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/mmch.py)
-  [![](https://img.shields.io/badge/-INOD-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/inod.py)
-  [![](https://img.shields.io/badge/-SSET-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/sset.py)
-  [![](https://img.shields.io/badge/-CAT-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/cat.py)
+  [![](https://img.shields.io/badge/-INOD-yellow.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/inod.py)
+  [![](https://img.shields.io/badge/-SSET-yellow.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/sset.py)
+  [![](https://img.shields.io/badge/-CAT-yellow.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/cat.py)
   [![](https://img.shields.io/badge/-KMP-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/kmp.py)
-  [![](https://img.shields.io/badge/-PDST-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/pdst.py)
+  [![](https://img.shields.io/badge/-PDST-yellow.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/pdst.py)
   [![](https://img.shields.io/badge/-RSTR-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/rstr.py)
   [![](https://img.shields.io/badge/-KMER-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/kmer.py)
   [![](https://img.shields.io/badge/-CORR-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/corr.py)
   [![](https://img.shields.io/badge/-LCSQ-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/lcso.py)
   [![](https://img.shields.io/badge/-LEXV-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/lexv.py)
-  [![](https://img.shields.io/badge/-REAR-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/rear.py)
+  [![](https://img.shields.io/badge/-REAR-yellow.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/rear.py)
 
   [![](https://img.shields.io/badge/-NWCK-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/nwck.py)
   [![](https://img.shields.io/badge/-ASPC-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/aspc.py)
