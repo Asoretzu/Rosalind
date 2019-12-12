@@ -57,7 +57,7 @@
   [![](https://img.shields.io/badge/-LONG-yellow.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/long.py)
   [![](https://img.shields.io/badge/-SSEQ-yellow.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/sseo.py)
   [![](https://img.shields.io/badge/-TRAN-yellow.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/tran.py)
-  [![](https://img.shields.io/badge/-LEXF-yellow.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/lexf.py)
+  [![](https://img.shields.io/badge/-LEXF-success.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/lexf.py)
   [![](https://img.shields.io/badge/-LGIS-success.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/lgis.py)
   [![](https://img.shields.io/badge/-SIGN-success.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/sign.py)
 
@@ -68,10 +68,10 @@
   [![](https://img.shields.io/badge/-KMP-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/kmp.py)
   [![](https://img.shields.io/badge/-PDST-yellow.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/pdst.py)
   [![](https://img.shields.io/badge/-RSTR-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/rstr.py)
-  [![](https://img.shields.io/badge/-KMER-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/kmer.py)
+  [![](https://img.shields.io/badge/-KMER-yellow.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/kmer.py)
   [![](https://img.shields.io/badge/-CORR-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/corr.py)
   [![](https://img.shields.io/badge/-LCSQ-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/lcso.py)
-  [![](https://img.shields.io/badge/-LEXV-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/lexv.py)
+  [![](https://img.shields.io/badge/-LEXV-yellow.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/lexv.py)
   [![](https://img.shields.io/badge/-REAR-yellow.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/rear.py)
 
   [![](https://img.shields.io/badge/-NWCK-lightgray.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/nwck.py)
