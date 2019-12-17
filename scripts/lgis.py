@@ -1,38 +1,8 @@
-# ID = "LGIS"
-# PROJECT = "Longest Increasing Subsequence"
-
-# A subsequence of a permutation is a collection of elements of the permutation
-# in the order that they appear. For example, (5, 3, 4) is a subsequence of
-# (5, 1, 3, 4, 2).
-
-# A subsequence is increasing if the elements of the subsequence increase, and
-# decreasing if the elements decrease. For example, given the permutation
-# (8, 2, 1, 6, 5, 7, 4, 3, 9), an increasing subsequence is (2, 6, 7, 9), and a
-# decreasing subsequence is (8, 6, 5, 4, 3). You may verify that these two
-# subsequences are as long as possible.
-
-# Given: A positive integer n≤10000 followed by a permutation π of length n.
-#
-# Return: A longest increasing subsequence of π, followed by a longest
-# decreasing subsequence of π.
-
-# Sample Dataset
-
-# 5
-# 5 1 4 2 3
-
-# Sample Output
-
-# 1 2 3
-# 5 4 2
-
-
-# file_name = "TXT/lalo.txt"
-file_name = "TXT/rosalind_lgis.txt"
+from services import fasta
 
 
 # Search for the longest increasing subsequence
-def increasing(data, length):
+def _increasing(data, length):
     M = [None] * length
     P = [None] * length
 
@@ -79,7 +49,7 @@ def increasing(data, length):
 
 
 # Search for the longest decreasing subsequence
-def decreasing(data, length):
+def _decreasing(data, length):
     M = [None] * length
     P = [None] * length
 
@@ -126,7 +96,7 @@ def decreasing(data, length):
 
 
 # Print the subsequence in a fancy way
-def print_data(data):
+def _print_data(data):
     d = []
     for i in data:
         d.append(str(i))
@@ -135,15 +105,47 @@ def print_data(data):
 
 
 # Gets the data and calls all the functions
-def LGIS():
+def lgis(file_name):
+    """
+    Prints the longest increasing subsequence, followed by a longest decreasing
+    subsequence of a given set of numbers.
+
+    Keyword arguments:
+    file_name -- The path of the txt file to be parsed.
+
+
+    Longest Increasing Subsequence
+
+    A subsequence of a permutation is a collection of elements of the
+    permutation in the order that they appear. For example, (5, 3, 4) is a
+    subsequence of (5, 1, 3, 4, 2).
+
+    A subsequence is increasing if the elements of the subsequence increase,
+    and decreasing if the elements decrease. For example, given the permutation
+    (8, 2, 1, 6, 5, 7, 4, 3, 9), an increasing subsequence is (2, 6, 7, 9), and
+    a decreasing subsequence is (8, 6, 5, 4, 3). You may verify that these two
+    subsequences are as long as possible.
+
+    Given: A positive integer n≤10000 followed by a permutation π of length n.
+
+    Return: A longest increasing subsequence of π, followed by a longest
+    decreasing subsequence of π.
+
+    Sample Dataset
+    5
+    5 1 4 2 3
+
+    Sample Output
+    1 2 3
+    5 4 2
+    """
+
     string = ""
     data = []
     increase = []
     decrease = []
 
-    with open(file_name, mode="r") as f:
-        for line in f:
-            string = string + line
+    string = fasta.get(file_name, remove_new_line=False)
 
     string = string.split()
     length = int(string[0])
@@ -152,12 +154,8 @@ def LGIS():
     for element in string:
         data.append(int(element))
 
-    increase = increasing(data, length)
-    decrease = decreasing(data, length)
+    increase = _increasing(data, length)
+    decrease = _decreasing(data, length)
 
-    print_data(increase)
-    print_data(decrease)
-
-
-if __name__ == "__main__":
-    LGIS()
+    _print_data(increase)
+    _print_data(decrease)
