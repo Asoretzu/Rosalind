@@ -9,7 +9,7 @@ def lcsm(file_name):
     file_name -- The path of the txt file to be parsed.
 
 
-    PROJECT = "Finding a Shared Motif"
+    Finding a Shared Motif
 
     A common substring of a collection of strings is a substring of every
     member of the collection. We say that a common substring is a longest
