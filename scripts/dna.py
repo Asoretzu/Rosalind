@@ -1,3 +1,6 @@
+"""Counting DNA Nucleotides."""
+
+
 from services import fasta
 
 
@@ -16,7 +19,7 @@ def dna(file_name):
     symbols that it contains.
 
     An example of a length 21 DNA string (whose alphabet contains the symbols
-    'A','C', 'G', and 'T') is "ATGCTTCAGAAAGGTCTTACG."
+    'A','C', 'G', and 'T') is "ATGCTTCAGAAAGGTCTTACG".
 
     Given: A DNA string "s" of length at most 1000 nt.
 
@@ -38,15 +41,15 @@ def dna(file_name):
     t = 0
 
     for nt in dna:
-        if nt == "A":
-            a = a + 1
-        elif nt == "C":
-            c = c + 1
-        elif nt == "G":
-            g = g + 1
-        elif nt == "T":
-            t = t + 1
+        if nt == 'A':
+            a += 1
+        elif nt == 'C':
+            c += 1
+        elif nt == 'G':
+            g += 1
+        elif nt == 'T':
+            t += 1
         else:
             pass
 
-    print("{} {} {} {}".format(a, c, g, t))
+    return f'{a} {c} {g} {t}'

@@ -1,3 +1,6 @@
+"""Transcribing DNA into RNA."""
+
+
 from services import fasta
 
 
@@ -30,12 +33,12 @@ def rna(file_name):
     """
 
     dna = fasta.get(file_name)
-    rna = ""
+    rna = ''
 
     for nt in dna:
-        if nt == "T":
-            rna = rna + "U"
+        if nt == 'T':
+            rna += 'U'
         else:
-            rna = rna + nt
+            rna += nt
 
-    print(rna)
+    return rna

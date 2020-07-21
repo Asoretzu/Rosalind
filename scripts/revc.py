@@ -1,3 +1,6 @@
+"""Complementing a Strand of DNA."""
+
+
 from services import fasta
 
 
@@ -30,17 +33,17 @@ def revc(file_name):
     """
 
     dna = fasta.get(file_name)
-    rev_dna = dna[:: -1]
-    com_dna = ""
+    reverse_dna = dna[:: -1]
+    complement_dna = ''
 
-    for nt in rev_dna:
-        if nt == "A":
-            com_dna = com_dna + "T"
-        elif nt == "C":
-            com_dna = com_dna + "G"
-        elif nt == "T":
-            com_dna = com_dna + "A"
-        elif nt == "G":
-            com_dna = com_dna + "C"
+    for nt in reverse_dna:
+        if nt == 'A':
+            complement_dna += 'T'
+        elif nt == 'C':
+            complement_dna += 'G'
+        elif nt == 'T':
+            complement_dna += 'A'
+        elif nt == 'G':
+            complement_dna += 'C'
 
-    print(com_dna)
+    return complement_dna
