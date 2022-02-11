@@ -6,12 +6,12 @@ from scripts import *
 
 
 # Main function with options
-def main(work):
+def main(args):
     try:
-        if work[1] == 'dna':
-            print(dna.dna(work[2]))
+        if args[1] == 'dna':
+            dna.dna(args[2])
         else:
-            print(f"The module <{work[1]}> doesn't exist.")
+            print(f"The module <{args[1]}> doesn't exist.")
     except:
         print('Invalid arguments received.')
 
