@@ -1,5 +1,4 @@
-txt/
-lalo.py
-_*.py
-*.fasta
 __pycache__/
+txt/
+
+*.txt
