@@ -11,7 +11,7 @@ def main(args):
         if args[1] == 'dna':
             dna.dna(args[2])
         else:
-            print(f"The module <{args[1]}> doesn't exist.")
+            print(f"The module '{args[1]}' doesn't exist.")
     except:
         print('Invalid arguments received.')
 
