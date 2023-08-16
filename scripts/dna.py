@@ -1,11 +1,8 @@
-"""Counting DNA Nucleotides."""
-
-import matplotlib.pyplot as plt
-
 from services import fasta
 
-# DNA module: Counting and Plotting
+
 def dna(file_name):
+    """Counting DNA Nucleotides."""
     try:
         dna = fasta.get(file_name)
 
@@ -21,19 +18,12 @@ def dna(file_name):
             elif nt == 'T':
                 t += 1
             else:
-                print(f'Unknow element: {nt}.')
+                print(f'Unknow element: {nt}')
 
         counts = [a, c, g, t]
 
         # Prints the nucleotides count in the specified format
         print(" ".join(map(str, counts)))
-
-        # Plotting the nucleotides count
-        plt.bar(range(4), counts)
-        plt.title('Counting DNA Nucleotides')
-        plt.ylabel('Count')
-        plt.xticks(range(len(counts)), ['A', 'C', 'G', 'T'])
-        plt.show()
 
     except:
         print('Wrong information.')
