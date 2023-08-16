@@ -5,7 +5,7 @@
   [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
   [![](https://img.shields.io/badge/Progress-31%2F105-blue)](https://github.com/Asoretzu/rosalind-stronghold)
   [![](https://img.shields.io/github/repo-size/asoretzu/rosalind-stronghold.svg)](https://github.com/Asoretzu/rosalind-stronghold)
-  [![](https://img.shields.io/github/license/Asoretzu/Rosalind.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/scripts/LICENSE.md)
+  [![](https://img.shields.io/github/license/Asoretzu/Rosalind.svg)](https://github.com/Asoretzu/rosalind-stronghold/blob/master/LICENSE.md)
 
 </div>
 
