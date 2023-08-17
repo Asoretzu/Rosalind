@@ -18,4 +18,4 @@ def revc(file_name):
         elif nt == 'G':
             complement_dna += 'C'
 
-    return complement_dna
+    print(complement_dna)
