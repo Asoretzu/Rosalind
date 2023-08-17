@@ -1,5 +1,5 @@
 from services import fasta
-from services.math import fact
+from math import factorial
 
 
 def pmch(file_name):
@@ -12,5 +12,5 @@ def pmch(file_name):
     AU = data.count("A")
     GC = data.count("G")
 
-    result = fact(AU) * fact(GC)
+    result = factorial(AU) * factorial(GC)
     print(result)

@@ -1,5 +1,5 @@
 from services import fasta
-from services.math import fact
+from math import factorial
 
 
 def lia(file_name):
@@ -15,7 +15,7 @@ def lia(file_name):
     total = 0
 
     for i in range(N, r+1):
-        prob = (fact(r) / (fact(i) * fact(r - i))) * (0.25**i) * (0.75**(r-i))
+        prob = (factorial(r) / (factorial(i) * factorial(r - i))) * (0.25**i) * (0.75**(r-i))
         total = total + prob
 
     print(round(total, 3))
