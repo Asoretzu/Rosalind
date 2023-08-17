@@ -3,6 +3,7 @@ from services import fasta
 
 def dna(file_name):
     """Counting DNA Nucleotides."""
+    
     try:
         dna = fasta.get(file_name)
 

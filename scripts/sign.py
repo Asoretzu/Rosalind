@@ -3,41 +3,7 @@ from itertools import permutations
 
 
 def sign(file_name):
-    """
-    Prints the total number of signed permutations of a given length,
-    followed by a list of all such permutations.
-
-    Keyword arguments:
-    file_name -- The path of the txt file to be parsed.
-
-
-    Enumerating Oriented Gene Orderings
-
-    A signed permutation of length n is some ordering of the positive integers
-    {1, 2, …, n} in which each integer is then provided with either a positive
-    or negative sign(for the sake of simplicity, we omit the positive sign).
-    For example, π= (5, −3, −2, 1, 4) is a signed permutation of length 5.
-
-    Given: A positive integer n≤6.
-
-    Return: The total number of signed permutations of length n, followed by a
-    list of all such permutations(you may list the signed permutations in any
-    order).
-
-    Sample Dataset
-    2
-
-    Sample Output
-    8
-    -1 -2
-    -1  2
-     1 -2
-     1  2
-    -2 -1
-    -2  1
-     2 -1
-     2  1
-    """
+    """Enumerating Oriented Gene Orderings"""
 
     num = int(fasta.get(file_name))
     string = []
