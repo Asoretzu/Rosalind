@@ -1,7 +1,7 @@
 from services import fasta
 
 
-def dna(file_name):
+def work(file_name):
     """Counting DNA Nucleotides."""
     
     try:

@@ -1,7 +1,7 @@
 from services import fasta
 
 
-def lcsm(file_name):
+def work(file_name):
     """Finding a Shared Motif"""
 
     dataset = fasta.get(file_name)

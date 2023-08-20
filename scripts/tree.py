@@ -1,7 +1,7 @@
 from services import fasta
 
 
-def tree(file_name):
+def work(file_name):
     """Completing a Tree"""
 
     data = fasta.get(file_name, remove_new_line=False)

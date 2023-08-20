@@ -1,7 +1,7 @@
 from services import fasta
 
 
-def revc(file_name):
+def work(file_name):
     """Complementing a Strand of DNA."""
 
     dna = fasta.get(file_name)

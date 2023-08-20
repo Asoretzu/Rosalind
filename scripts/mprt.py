@@ -3,7 +3,7 @@ import os
 # Download the Requests Module, via "pip install requests".
 
 
-def mprt(file_name):
+def work(file_name):
     """Finding a Protein Motif"""
 
     dataset = []

@@ -3,7 +3,7 @@ from services import translate
 from services import search
 
 
-def orf(file_name):
+def work(file_name):
     """Open Reading Frames"""
 
     dna = fasta.get(file_name)

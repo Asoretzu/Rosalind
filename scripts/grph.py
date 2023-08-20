@@ -1,7 +1,7 @@
 from services import fasta
 
 
-def grph(file_name):
+def work(file_name):
     """Overlap Graphs"""
 
     data = fasta.get(file_name)

@@ -1,7 +1,7 @@
 from services import fasta
 
 
-def subs(file_name):
+def work(file_name):
     """Finding a Motif in DNA"""
 
     data = fasta.get(file_name, remove_new_line=False)

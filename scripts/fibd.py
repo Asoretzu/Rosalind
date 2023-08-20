@@ -1,7 +1,7 @@
 from services import fasta
 
 
-def fibd(file_name):
+def work(file_name):
     """Mortal Fibonacci Rabbits"""
 
     data = fasta.get(file_name)

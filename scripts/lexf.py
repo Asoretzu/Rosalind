@@ -2,7 +2,7 @@ from services import fasta
 from itertools import product
 
 
-def lexf(file_name):
+def work(file_name):
     """Enumerating k-mers Lexicographically"""
 
     data = fasta.get(file_name, remove_new_line=False)

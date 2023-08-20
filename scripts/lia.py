@@ -2,7 +2,7 @@ from services import fasta
 from math import factorial
 
 
-def lia(file_name):
+def work(file_name):
     """Independent Alleles"""
 
     data = fasta.get(file_name)

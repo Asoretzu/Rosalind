@@ -10,7 +10,7 @@ def _trans_finder(b1, b2):
     return[0, 1]
 
 
-def tran(file_name):
+def work(file_name):
     """Transitions and Transversions"""
 
     data = fasta.get(file_name)

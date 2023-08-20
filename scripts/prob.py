@@ -3,7 +3,7 @@ from math import log10
 from services import extras
 
 
-def prob(file_name):
+def work(file_name):
     """Introduction to Random Strings"""
 
     data = fasta.get(file_name, remove_new_line=False)

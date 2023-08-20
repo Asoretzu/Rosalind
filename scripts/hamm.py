@@ -1,7 +1,7 @@
 from services import fasta
 
 
-def hamm(file_name):
+def work(file_name):
     """Counting Point Mutations"""
 
     data = fasta.get(file_name, remove_new_line=False)

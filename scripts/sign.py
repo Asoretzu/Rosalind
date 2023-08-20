@@ -2,7 +2,7 @@ from services import fasta
 from itertools import permutations
 
 
-def sign(file_name):
+def work(file_name):
     """Enumerating Oriented Gene Orderings"""
 
     num = int(fasta.get(file_name))

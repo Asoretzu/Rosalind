@@ -1,7 +1,7 @@
 from services import fasta
 
 
-def rna(file_name):
+def work(file_name):
     """Transcribing DNA into RNA."""
 
     dna = fasta.get(file_name)

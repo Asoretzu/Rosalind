@@ -1,7 +1,7 @@
 from services import fasta
 
 
-def pper(file_name):
+def work(file_name):
     """Partial Permutations"""
 
     data = fasta.get(file_name)

@@ -2,7 +2,7 @@ from services import fasta
 from services import translate
 
 
-def splc(file_name):
+def work(file_name):
     """RNA Splicing"""
 
     dataset = fasta.get(file_name)

@@ -1,7 +1,7 @@
 from services import fasta
 
 
-def iev(file_name):
+def work(file_name):
     """Calculating Expected Offspring"""
 
     data = fasta.get(file_name)

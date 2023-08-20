@@ -1,7 +1,7 @@
 from services import fasta
 
 
-def gc(file_name):
+def work(file_name):
     """Computing GC Content"""
 
     data = fasta.get(file_name)

@@ -1,7 +1,7 @@
 from services import fasta
 
 
-def cons(file_name):
+def work(file_name):
     """Consensus and Profile"""
 
     data = fasta.get(file_name)

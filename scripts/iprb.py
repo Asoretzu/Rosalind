@@ -1,7 +1,7 @@
 from services import fasta
 
 
-def iprb(file_name):
+def work(file_name):
     """Mendel's First Law"""
 
     data = fasta.get(file_name)

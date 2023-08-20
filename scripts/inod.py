@@ -1,4 +1,10 @@
-def inod(nodes):
+def work(nodes):
     """Counting Phylogenetic Ancestors"""
 
-    print(int(nodes) - 2)
+    text = ""
+
+    with open(nodes, "r") as file:
+        for line in file:
+            text += line
+    
+    print(int(text) - 2)

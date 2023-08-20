@@ -1,7 +1,7 @@
 from services import fasta
 
 
-def fib(file_name):
+def work(file_name):
     """Rabbits and Recurrence Relations"""
 
     data = fasta.get(file_name)

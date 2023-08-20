@@ -105,7 +105,7 @@ def _print_data(data):
 
 
 # Gets the data and calls all the functions
-def lgis(file_name):
+def work(file_name):
     """Longest Increasing Subsequence"""
 
     string = ""

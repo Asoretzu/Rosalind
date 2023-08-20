@@ -2,7 +2,7 @@ from services import fasta
 from services import translate
 
 
-def revp(file_name):
+def work(file_name):
     """Locating Restriction Sites"""
 
     dataset = fasta.get(file_name)

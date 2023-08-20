@@ -2,7 +2,7 @@ from services import fasta
 from services import extras
 
 
-def sseq(file_name):
+def work(file_name):
     """Finding a Spliced Motif"""
 
     data = fasta.get(file_name)

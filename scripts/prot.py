@@ -2,7 +2,7 @@ from services import fasta
 from services import translate
 
 
-def prot(file_name):
+def work(file_name):
     """Translating RNA into Protein"""
 
     data = fasta.get(file_name)

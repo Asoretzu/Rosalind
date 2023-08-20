@@ -2,7 +2,7 @@ from services import fasta
 from math import factorial
 
 
-def pmch(file_name):
+def work(file_name):
     """Perfect Matchings and RNA Secondary Structures"""
 
     dataset = fasta.get(file_name)

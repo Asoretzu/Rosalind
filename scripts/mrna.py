@@ -2,7 +2,7 @@ from services import fasta
 from services.search import possible_codons
 
 
-def mrna(file_name):
+def work(file_name):
     """Inferring mRNA from Protein"""
 
     data = fasta.get(file_name)

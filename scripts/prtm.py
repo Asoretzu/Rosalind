@@ -2,7 +2,7 @@ from services import fasta
 from services.search import amino_mass
 
 
-def prtm(file_name):
+def work(file_name):
     """Calculating Protein Mass"""
 
     data = fasta.get(file_name)
