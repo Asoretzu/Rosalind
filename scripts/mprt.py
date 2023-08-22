@@ -1,6 +1,5 @@
 import requests
 import os
-# Download the Requests Module, via "pip install requests".
 
 
 def work(file_name):
