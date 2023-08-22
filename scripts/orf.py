@@ -1,6 +1,24 @@
 from services import fasta
 from services import translate
-from services import search
+
+from data import rna_codons
+
+
+def complement(rna):
+    r_rna = ""
+
+    for amino in rna:
+        if amino == "A":
+            r_rna = r_rna + "U"
+        elif amino == "U":
+            r_rna = r_rna + "A"
+        elif amino == "G":
+            r_rna = r_rna + "C"
+        elif amino == "C":
+            r_rna = r_rna + "G"
+
+    r_rna = r_rna[::-1]
+    return r_rna
 
 
 def work(file_name):
@@ -12,7 +30,7 @@ def work(file_name):
     start = []
     protein = ""
     to_print = False
-    r_rna = search.complement(rna)
+    r_rna = complement(rna)
     data = [rna, r_rna]
     proteins = []
 
@@ -26,7 +44,8 @@ def work(file_name):
         for i in start:
             for j in range(i, len(d)-2, 3):
                 codon = d[j] + d[j+1] + d[j+2]
-                c = translate.coding(codon)
+                # c = translate.coding(codon)
+                c = rna_codons[codon]
 
                 # If the codon is a Stop codon, then the string can be stored
                 if codon == "UAG" or codon == "UGA" or codon == "UAA":

@@ -1,5 +1,5 @@
 from services import fasta
-from services.search import possible_codons
+from data import possible_codons
 
 
 def work(file_name):
@@ -10,7 +10,7 @@ def work(file_name):
     a = 1
 
     for amino in data:
-        a = a * possible_codons(amino)
+        a = a * possible_codons[amino]
 
     # Adds the Stop codon
     a = a * 3
